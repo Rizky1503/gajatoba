@@ -17,6 +17,8 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<legend>Tambah Anggota</legend>
+						<p>Horas! Selamat bergabung di Perkumpulan Gaja Toba Semesta,kumpulan alumni Batak ITB yang berhimpun, saling mengenal, saling membangun, dan bersatu-padu untuk mencapai satu visi: "Menjadi mitra strategis pemerintah kabupaten/kota di Kawasan Danau Toba untuk menyejahterakan masyarakatnya."</p>
+						<p>Data ini akan digunakan untuk pemetaan anggota Perkumpulan Gaja Toba Semesta (PGTS).Seluruh data yang terkumpul akan dijaga kerahasiaannya dan akan digunakan, secara ketat, hanya untuk kepentingan internal organisasi.</p>
 						<form action="proses.php" method="post" enctype="multipart/form-data">
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs" role="tablist">
@@ -25,9 +27,6 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 								</li>
 								<li role="presentation">
 									<a href="#family_info" aria-controls="family_info" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-home"></i> Keluarga</a>
-								</li>
-								<li role="presentation">
-									<a href="#parent_info" aria-controls="parent_info" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-tree-conifer"></i> Orang Tua</a>
 								</li>
 								<li role="presentation">
 									<a href="#contact_info" aria-controls="contact_info" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-phone"></i> Kontak</a>
@@ -123,31 +122,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													</div>
 												</div>
 											</div>
-											<!-- Agama -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Tanggal Lahir
-												</label>
-												<div class="col-lg-5 col-md-5 col-sm-4">
-													<select data-toggle="select" name="agama" id="agama" class="form-control select select-primary mrs mbm">
-														<option value="">- Pilih Agama -</option>
-														<?php 
-															// Ambil data kota dari tabel master kota
-															$daftar_agama = ambil_data_global("aluni_m_agama", "id_agama, nama_agama", "aktif = 'ya'");
-															$select_agama = "";
-															foreach ($daftar_agama as $dagama) {
-																$select_agama .= "<option value='$dagama[id_agama]'>$dagama[nama_agama]</option>";
-															}
-															echo $select_agama;
-														?>
-													</select>
-													<script type="text/javascript">
-														$(document).ready(function() {
-															$('select[name="agama"]').select2({dropdownCssClass: 'show-select-search'});
-														});
-													</script>
-												</div>
-											</div>
+											
 											<!-- Foto -->
 											<div class="form-group">
 												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
@@ -157,23 +132,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													<input type="file" name="foto" id="foto" class="form-control">
 													<span class="help-block">Format harus jpg, png atau gif. Maksimal ukuran 2 Mb.</span>
 												</div>
-											</div>
-											<!-- Aktif -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Aktif
-												</label>
-												<div class="col-lg-5 col-md-5 col-sm-4">
-													<label class="radio">
-														<input type="radio" data-toggle="radio" name="aktif" id="aktif1" value="ya" data-radiocheck-toggle="radio" checked="" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-														Ya
-													</label>
-													<label class="radio">
-														<input type="radio" data-toggle="radio" name="aktif" id="aktif2" value="tidak" data-radiocheck-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
-														Tidak
-													</label>
-												</div>
-											</div>
+											</div>										
 											<hr>
 											<!-- Alamat Provinsi Tinggal -->
 											<div class="form-group">
@@ -256,86 +215,6 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 									</div>
 								</div>
 
-								<!-- Informasi Orang Tua -->
-								<div role="tabpanel" class="tab-pane" id="parent_info">
-									<div class="container">
-										<div class="col-sm-10 form-horizontal">
-											<br>
-											<!-- Nama Ayah -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Nama Ayah
-												</label>
-												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_ayah" id="nama_ayah" class="form-control" placeholder="Nama Ayah">
-												</div>
-											</div>
-											<!-- Nama Ibu -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Nama Ibu
-												</label>
-												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_ibu" id="nama_ibu" class="form-control" placeholder="Nama Ibu">
-												</div>
-											</div>
-											<!-- Nama Wali -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Nama Wali
-												</label>
-												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_wali" id="nama_wali" class="form-control" placeholder="Nama Wali (Optional)">
-												</div>
-											</div>
-											<hr>
-											<!-- Alamat Provinsi Tinggal Orang Tua -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Provinsi Tinggal
-												</label>
-												<div class="col-lg-5 col-md-5 col-sm-4">
-													<select data-toggle="select" name="id_provinsi_ot" id="id_provinsi_ot" class="form-control select select-primary mrs mbm" onchange="ajax_kota(this.value, 'id_kota_ot', 'kolom_kota_ot')">
-														<option value="">- Pilih Provinsi -</option>
-														<?php 
-															// Ambil data kota dari tabel master kota
-															$daftar_provinsi = ambil_data_global("aluni_m_provinsi", "id_provinsi, nama_provinsi", "aktif = 'ya'");
-															$select_provinsi = "";
-															foreach ($daftar_provinsi as $dprovinsi) {
-																$select_provinsi .= "<option value='$dprovinsi[id_provinsi]'>$dprovinsi[nama_provinsi]</option>";
-															}
-															echo $select_provinsi;
-														?>
-													</select>
-													<script type="text/javascript">
-														$(document).ready(function() {
-															$('select[name="id_provinsi_ot"]').select2({dropdownCssClass: 'show-select-search'});
-														});
-													</script>
-												</div>
-											</div>
-											<!-- Alamat Kota Tinggal Orang Tua -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Kota Tinggal
-												</label>
-												<div class="col-lg-5 col-md-5 col-sm-4" id="kolom_kota_ot">
-													<input type='hidden' name='id_kota_ot' id='id_kota_ot' value=''>
-												</div>
-											</div>
-											<!-- Alamat Orang Tua -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Alamat
-												</label>
-												<div class="col-lg-8 col-md-8 col-sm-6">
-													<textarea name="alamat_ot" id="alamat_ot" class="form-control"></textarea>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
 								<!-- Informasi Kontak -->
 								<div role="tabpanel" class="tab-pane" id="contact_info">
 									<div class="container">
@@ -369,25 +248,6 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													<input type="text" name="no_handphone" id="no_handphone" class="form-control" placeholder="No Handphone" onfocus="input_nomor(this.id)">
 												</div>
 											</div>
-											<!-- No Handphone 2 -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													No Handphone 2
-												</label>
-												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="no_handphone2" id="no_handphone2" class="form-control" placeholder="No Handphone 2" onfocus="input_nomor(this.id)">
-												</div>
-											</div>
-											<!-- PIN Blackberry -->
-											<div class="form-group">
-												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
-													Pin Blackberry
-												</label>
-												<div class="col-lg-5 col-md-5 col-sm-4">
-													<input type="text" name="pin_blackberry" id="pin_blackberry" class="form-control" placeholder="Pin Blackberry">
-												</div>
-											</div>
-											<hr>
 											<!-- Email -->
 											<div class="form-group">
 												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
@@ -420,6 +280,15 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 											<div class="form-group">
 												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
 													Twitter
+												</label>
+												<div class="col-lg-8 col-md-8 col-sm-6">
+													<input type="text" name="twitter" id="twitter" class="form-control" placeholder="Twitter (@nama_anda)">
+												</div>
+											</div>
+											<!-- Instagram -->
+											<div class="form-group">
+												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
+													Instagram
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
 													<input type="text" name="twitter" id="twitter" class="form-control" placeholder="Twitter (@nama_anda)">
