@@ -1,0 +1,113 @@
+Time : 02:33:59
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ''  ORDER BY aluni_anggota_dasar.id_anggota DESC' at line 54
+Raw SQL : SELECT aluni_anggota_dasar.id_anggota, 
+				aluni_anggota_dasar.nama_lengkap, 
+				aluni_anggota_dasar.nama_panggilan, 
+				aluni_anggota_dasar.jenis_kelamin, 
+				aluni_anggota_dasar.tempat_lahir, 
+				aluni_anggota_dasar.tanggal_lahir, 
+				aluni_anggota_dasar.agama AS id_agama, 
+				aluni_m_agama.nama_agama AS agama, 
+				aluni_anggota_dasar.foto, 
+				aluni_anggota_dasar.id_provinsi, 
+				pro1.nama_provinsi AS provinsi, 
+				aluni_anggota_dasar.id_kota, 
+				kot1.nama_kota AS kota, 
+				aluni_anggota_dasar.alamat, 
+				aluni_anggota_dasar.aktif, 
+				aluni_anggota_akademik.angkatan, 
+				aluni_anggota_akademik.tahun_masuk, 
+				aluni_anggota_akademik.tahun_keluar, 
+				aluni_anggota_akademik.kelas_terakhir, 
+				aluni_anggota_akademik.catatan, 
+				aluni_anggota_keluarga.nama_pasangan, 
+				aluni_anggota_keluarga.nama_anak, 
+				aluni_anggota_orang_tua.nama_ayah, 
+				aluni_anggota_orang_tua.nama_ibu, 
+				aluni_anggota_orang_tua.nama_wali, 
+				aluni_anggota_orang_tua.id_provinsi AS id_provinsi_ot, 
+				pro2.nama_provinsi AS provinsi_orang_tua, 
+				aluni_anggota_orang_tua.id_kota AS id_kota_ot, 
+				kot2.nama_kota AS kota_orang_tua, 
+				aluni_anggota_orang_tua.alamat_orang_tua, 
+				aluni_anggota_kontak.no_rumah, 
+				aluni_anggota_kontak.no_handphone, 
+				aluni_anggota_kontak.no_handphone2, 
+				aluni_anggota_kontak.pin_blackberry, 
+				aluni_anggota_kontak.alamat_email, 
+				aluni_anggota_kontak.alamat_website, 
+				aluni_anggota_kontak.facebook, 
+				aluni_anggota_kontak.twitter, 
+				aluni_pengguna.username, 
+				aluni_pengguna.nama_depan, 
+				aluni_pengguna.nama_belakang 
+				 
+			FROM aluni_anggota_dasar 
+			LEFT JOIN aluni_anggota_keluarga ON aluni_anggota_dasar.id_anggota = aluni_anggota_keluarga.id_anggota 
+			LEFT JOIN aluni_anggota_akademik ON aluni_anggota_dasar.id_anggota = aluni_anggota_akademik.id_anggota 
+			LEFT JOIN aluni_anggota_orang_tua ON aluni_anggota_dasar.id_anggota = aluni_anggota_orang_tua.id_anggota 
+			LEFT JOIN aluni_anggota_kontak ON aluni_anggota_dasar.id_anggota = aluni_anggota_kontak.id_anggota 
+			LEFT JOIN aluni_m_agama ON aluni_anggota_dasar.agama = aluni_m_agama.id_agama 
+			LEFT JOIN aluni_m_provinsi pro1 ON aluni_anggota_dasar.id_provinsi = pro1.id_provinsi 
+			LEFT JOIN aluni_m_kota kot1 ON aluni_anggota_dasar.id_kota = kot1.id_kota
+			LEFT JOIN aluni_m_provinsi pro2 ON aluni_anggota_orang_tua.id_provinsi = pro2.id_provinsi 
+			LEFT JOIN aluni_m_kota kot2 ON aluni_anggota_orang_tua.id_kota = kot2.id_kota 
+			LEFT JOIN aluni_pengguna ON aluni_anggota_dasar.id_anggota = aluni_pengguna.id_anggota
+		 WHERE  = ''  ORDER BY aluni_anggota_dasar.id_anggota DESC
+
+Time : 00:01:11
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'provinsi' in 'where clause'
+Raw SQL : SELECT aluni_anggota_dasar.id_anggota, 
+				aluni_anggota_dasar.nama_lengkap, 
+				aluni_anggota_dasar.nama_panggilan, 
+				aluni_anggota_dasar.jenis_kelamin, 
+				aluni_anggota_dasar.tempat_lahir, 
+				aluni_anggota_dasar.tanggal_lahir, 
+				aluni_anggota_dasar.agama AS id_agama, 
+				aluni_m_agama.nama_agama AS agama, 
+				aluni_anggota_dasar.foto, 
+				aluni_anggota_dasar.id_provinsi, 
+				pro1.nama_provinsi AS provinsi, 
+				aluni_anggota_dasar.id_kota, 
+				kot1.nama_kota AS kota, 
+				aluni_anggota_dasar.alamat, 
+				aluni_anggota_dasar.aktif, 
+				aluni_anggota_akademik.angkatan, 
+				aluni_anggota_akademik.tahun_masuk, 
+				aluni_anggota_akademik.tahun_keluar, 
+				aluni_anggota_akademik.kelas_terakhir, 
+				aluni_anggota_akademik.catatan, 
+				aluni_anggota_keluarga.nama_pasangan, 
+				aluni_anggota_keluarga.nama_anak, 
+				aluni_anggota_orang_tua.nama_ayah, 
+				aluni_anggota_orang_tua.nama_ibu, 
+				aluni_anggota_orang_tua.nama_wali, 
+				aluni_anggota_orang_tua.id_provinsi AS id_provinsi_ot, 
+				pro2.nama_provinsi AS provinsi_orang_tua, 
+				aluni_anggota_orang_tua.id_kota AS id_kota_ot, 
+				kot2.nama_kota AS kota_orang_tua, 
+				aluni_anggota_orang_tua.alamat_orang_tua, 
+				aluni_anggota_kontak.no_rumah, 
+				aluni_anggota_kontak.no_handphone, 
+				aluni_anggota_kontak.no_handphone2, 
+				aluni_anggota_kontak.pin_blackberry, 
+				aluni_anggota_kontak.alamat_email, 
+				aluni_anggota_kontak.alamat_website, 
+				aluni_anggota_kontak.facebook, 
+				aluni_anggota_kontak.twitter, 
+				aluni_pengguna.username, 
+				aluni_pengguna.nama_depan, 
+				aluni_pengguna.nama_belakang 
+				 
+			FROM aluni_anggota_dasar 
+			LEFT JOIN aluni_anggota_keluarga ON aluni_anggota_dasar.id_anggota = aluni_anggota_keluarga.id_anggota 
+			LEFT JOIN aluni_anggota_akademik ON aluni_anggota_dasar.id_anggota = aluni_anggota_akademik.id_anggota 
+			LEFT JOIN aluni_anggota_orang_tua ON aluni_anggota_dasar.id_anggota = aluni_anggota_orang_tua.id_anggota 
+			LEFT JOIN aluni_anggota_kontak ON aluni_anggota_dasar.id_anggota = aluni_anggota_kontak.id_anggota 
+			LEFT JOIN aluni_m_agama ON aluni_anggota_dasar.agama = aluni_m_agama.id_agama 
+			LEFT JOIN aluni_m_provinsi pro1 ON aluni_anggota_dasar.id_provinsi = pro1.id_provinsi 
+			LEFT JOIN aluni_m_kota kot1 ON aluni_anggota_dasar.id_kota = kot1.id_kota
+			LEFT JOIN aluni_m_provinsi pro2 ON aluni_anggota_orang_tua.id_provinsi = pro2.id_provinsi 
+			LEFT JOIN aluni_m_kota kot2 ON aluni_anggota_orang_tua.id_kota = kot2.id_kota 
+			LEFT JOIN aluni_pengguna ON aluni_anggota_dasar.id_anggota = aluni_pengguna.id_anggota
+		 WHERE provinsi = 'Banten'  ORDER BY aluni_anggota_dasar.id_anggota DESC

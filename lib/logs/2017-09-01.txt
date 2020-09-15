@@ -1,0 +1,44 @@
+Time : 23:44:07
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:43:47
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'idcnode.binercloud.com' (using password: YES)
+
+Time : 23:39:33
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'idcnode.binercloud.com' (using password: YES)
+
+Time : 23:39:09
+SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known
+
+Time : 23:26:44
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:26:43
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:26:12
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:26:10
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:26:09
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:25:46
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:25:40
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:25:39
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:22:02
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:22:00
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 23:21:22
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)

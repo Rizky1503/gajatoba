@@ -1,0 +1,14 @@
+Time : 11:22:10
+SQLSTATE[HY000] [1045] Access denied for user 'anggotag_uanggt'@'localhost' (using password: YES)
+
+Time : 10:41:46
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'rizky' for key 'PRIMARY'
+Raw SQL : INSERT INTO aluni_pengguna_hak_akses VALUES ('rizky', '', NOW())
+
+Time : 10:39:45
+SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'id_kota' at row 1
+Raw SQL : INSERT INTO aluni_anggota_dasar (nama_lengkap, nama_panggilan, jenis_kelamin, tempat_lahir, tanggal_lahir, agama, foto, id_provinsi, id_kota, alamat, aktif, created_by, created_date, updated_by, updated_date, revisi) VALUES ('rizky', 'rizky', 'laki-laki', 'Kota Bogor', '2020/09/17', '1', 'rizky.jpg', '12', '>- Pilih Kota -</option><option value=', '<p>bogor</p>', 'ya', 'admin', NOW(), 'admin', NOW(), '0')
+
+Time : 10:39:41
+SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'id_kota' at row 1
+Raw SQL : INSERT INTO aluni_anggota_dasar (nama_lengkap, nama_panggilan, jenis_kelamin, tempat_lahir, tanggal_lahir, agama, foto, id_provinsi, id_kota, alamat, aktif, created_by, created_date, updated_by, updated_date, revisi) VALUES ('rizky', 'rizky', 'laki-laki', 'Kota Bogor', '2020/09/17', '1', 'rizky.jpg', '12', '>- Pilih Kota -</option><option value=', '<p>bogor</p>', 'ya', 'admin', NOW(), 'admin', NOW(), '0')

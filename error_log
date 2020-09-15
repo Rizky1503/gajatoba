@@ -1,0 +1,16 @@
+[01-Sep-2017 23:39:09 Europe/Amsterdam] PHP Warning:  PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/anggotagajatoba/public_html/lib/db.class.php on line 60
+[01-Sep-2017 23:55:34 Europe/Amsterdam] PHP Warning:  move_uploaded_file(./uploaded/foto_profil/andy.png): failed to open stream: No such file or directory in /home/anggotagajatoba/public_html/proses.php on line 212
+[01-Sep-2017 23:55:34 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpVIAMNs' to './uploaded/foto_profil/andy.png' in /home/anggotagajatoba/public_html/proses.php on line 212
+[02-Sep-2017 00:00:25 Europe/Amsterdam] PHP Warning:  implode(): Invalid arguments passed in /home/anggotagajatoba/public_html/proses.php on line 494
+[02-Sep-2017 07:33:59 Asia/Jakarta] PHP Notice:  Undefined index: tipe in /home/anggotagajatoba/public_html/laporan_download.php on line 13
+[02-Sep-2017 07:33:59 Asia/Jakarta] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/anggotagajatoba/public_html/laporan_download.php:13) in /home/anggotagajatoba/public_html/global_fungsi.php on line 1
+[02-Sep-2017 07:33:59 Asia/Jakarta] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/anggotagajatoba/public_html/laporan_download.php:13) in /home/anggotagajatoba/public_html/global_fungsi.php on line 1
+[02-Sep-2017 02:33:59 Europe/Amsterdam] PHP Notice:  Undefined variable: id in /home/anggotagajatoba/public_html/laporan_download.php on line 164
+[15-Sep-2020 10:39:41 Europe/Amsterdam] PHP Warning:  move_uploaded_file(./uploaded/foto_profil/rizky.jpg): failed to open stream: No such file or directory in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:39:41 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpKsALc8' to './uploaded/foto_profil/rizky.jpg' in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:39:45 Europe/Amsterdam] PHP Warning:  move_uploaded_file(./uploaded/foto_profil/rizky.jpg): failed to open stream: No such file or directory in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:39:45 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsMl2et' to './uploaded/foto_profil/rizky.jpg' in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:40:27 Europe/Amsterdam] PHP Warning:  move_uploaded_file(./uploaded/foto_profil/rizky.jpg): failed to open stream: No such file or directory in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:40:27 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpV4ktk9' to './uploaded/foto_profil/rizky.jpg' in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:41:46 Europe/Amsterdam] PHP Warning:  move_uploaded_file(./uploaded/foto_profil/rizky.jpg): failed to open stream: No such file or directory in /home/anggotagajatoba/public_html/proses.php on line 214
+[15-Sep-2020 10:41:46 Europe/Amsterdam] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpefZvcc' to './uploaded/foto_profil/rizky.jpg' in /home/anggotagajatoba/public_html/proses.php on line 214
